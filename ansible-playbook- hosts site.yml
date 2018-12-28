@@ -1,0 +1,36 @@
+PLAY [Install Jenkins] ****************************************************
+
+TASK [jenkins : install wget] *********************************************
+changed: [172.31.20.62]
+
+TASK [jenkins : install openjdk] ******************************************
+changed: [172.31.20.62]
+
+TASK [jenkins : download jenkins.repo] ************************************
+changed: [172.31.20.62]
+
+TASK [jenkins : import jenkins key] ***************************************
+changed: [172.31.20.62]
+
+TASK [jenkins : install jenkins] ******************************************
+changed: [172.31.20.62]
+
+TASK [jenkins : start jenkins] ********************************************
+changed: [172.31.20.62]
+
+TASK [jenkins : enable jenkins] *******************************************
+ok: [172.31.20.62]
+
+TASK [jenkins : sleep for 30 seconds and continue with play] **************
+ok: [172.31.20.62 -> localhost]
+
+TASK [jenkins : init password jenkin] *************************************
+ok: [172.31.20.62]
+
+TASK [jenkins : print init password jenkins] ******************************
+ok: [172.31.20.62] => {
+    "result.stdout": "145a4427b9b94afdacbe724d7db6bd2c"
+}
+
+PLAY RECAP ****************************************************************
+172.31.20.62               : ok=10   changed=6    unreachable=0    failed=0
